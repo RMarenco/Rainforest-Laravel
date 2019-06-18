@@ -1,0 +1,124 @@
+body,html{
+  height: 100%;
+}
+
+.mainbox{  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#closeOpenBtn{
+  position: fixed;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin: 3px;
+  margin-top: 4px;
+  border: 2px solid #8f8f8f;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.5s;
+  font-size: 30px;
+}
+
+#closeOpenBtn.moveRight{  
+}
+
+#closeOpenBtn:hover{
+  opacity: 1;
+}
+
+#navList{
+  padding: 0;
+  margin: auto;
+  margin-right: 10px;
+  list-style-type: none;
+  background-color: #8f8f8f;
+  width: 0px;
+  height: 100%;
+  float: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 0.5s;  
+}
+
+#navList.show{
+  padding: 0;
+  width: 200px;
+  visibility: visible;
+}
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #6f6f6f6f;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+#navList li a{
+  text-decoration: none;
+  color: #000;
+  padding: 8px;
+  display: block;
+  transition: 0.5s;
+  font-size: 19px;
+}
+
+#navList li a:hover{
+  color: #fff;
+  background-color: #aaa;
+}
