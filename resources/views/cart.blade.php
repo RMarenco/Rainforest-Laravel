@@ -624,7 +624,7 @@ if(isset($add)){
             ?>
             <form method="get" action="{{URL::to('/cart')}}">
               <input type="hidden" name="total_amount" value="<?=$total_amount?>"/>
-              <button class="btn btn-primary" type="submit" name="end"><i class="fa fa-check"></i>@if (app()->getLocale() == 'en')
+              <button class="btn btn-primary" type="submit" id="paypal-button" name="end"><i class="fa fa-check"></i>@if (app()->getLocale() == 'en')
               {{ __('messages.finalize-purchase') }}
               @elseif (app()->getLocale() == 'es')
               {{ __('messages.finalize-purchase') }}
@@ -687,6 +687,37 @@ if(isset($add)){
       }
     }
   </script>
+  <!-- Paypal script -->
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <script>
+  paypal.Button.render({
+    env: 'sandbox', // Or 'production'
+    // Set up the payment:
+    // 1. Add a payment callback
+    payment: function(data, actions) {
+      // 2. Make a request to your server
+      return actions.request.post('/api/create-payment')
+        .then(function(res) {
+          // 3. Return res.id from the response
+          return res.id;
+        });
+    },
+    // Execute the payment:
+    // 1. Add an onAuthorize callback
+    onAuthorize: function(data, actions) {
+      // 2. Make a request to your server
+      return actions.request.post('/api/execute-payment', {
+        paymentID: data.paymentID,
+        payerID:   data.payerID
+      })
+        .then(function(res) {
+          // 3. Show the buyer a confirmation message.
+          console.log(res);
+          alert('PAYMENT WENT THROUGH !!');
+        });
+    }
+  }, '#paypal-button');
+</script>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
