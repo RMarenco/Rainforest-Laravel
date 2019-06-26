@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 Icon Set:	Font Awesome -- http://fortawesome.github.com/Font-Awesome/
 License:	SIL -- http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 
 Icon Set:	Eco Ico -- http://dribbble.com/shots/665585-Eco-Ico
+=======
+Icon Set:	Font Awesome -- http://fortawesome.github.com/Font-Awesome/
+License:	SIL -- http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+
+Icon Set:	Eco Ico -- http://dribbble.com/shots/665585-Eco-Ico
+>>>>>>> e9b1688eb66a870fc29e49895a1cba4c4c7bd269
 License:	CC0 -- http://creativecommons.org/publicdomain/zero/1.0/

@@ -20,5 +20,9 @@
     </div>
 </div>
 <?php $__env->stopSection(); ?>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> e9b1688eb66a870fc29e49895a1cba4c4c7bd269
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\rainforest\resources\views/home.blade.php ENDPATH**/ ?>
