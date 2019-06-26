@@ -1,0 +1,25 @@
+[2019-06-19 16:52:15] local.ERROR: Class 'Pusher\Pusher' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Pusher\\Pusher' not found at C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php:211)
+[stacktrace]
+#0 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(189): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#1 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(164): Illuminate\\Broadcasting\\BroadcastManager->resolve('pusher')
+#2 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(153): Illuminate\\Broadcasting\\BroadcastManager->get('pusher')
+#3 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#4 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#5 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\outes\\channels.php(16): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#6 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\app\\Providers\\BroadcastServiceProvider.php(19): require('C:\\\\Users\\\\Blanco...')
+#7 [internal function]: App\\Providers\\BroadcastServiceProvider->boot()
+#8 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(580): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(817): Illuminate\\Container\\Container->call(Array)
+#13 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(800): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#14 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\BroadcastServiceProvider), 20)
+#15 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(801): array_walk(Array, Object(Closure))
+#16 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#17 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#18 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(311): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#19 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#20 C:\\Users\\Blanco\\Desktop\\Rainforest-Laravel-master\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
